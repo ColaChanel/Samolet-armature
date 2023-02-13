@@ -3,3 +3,4 @@ pip install wheel etna --upgrade pip --upgrade setuptools
 pip install tsfresh
 pip install protobuf
 pip install etna
+pip install ipykernel
