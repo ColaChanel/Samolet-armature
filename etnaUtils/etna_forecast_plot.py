@@ -106,13 +106,19 @@ def result(n=5):
     text_1 = f"Прогноз на 10 недель, начиная с {n} недели."
     # print(f"Прогноз на 10 недель, начиная с {n} недели.")
     buy=1
-    for i in range(9):
-        minimal = rf[n-1+i]
-        if rf[n-1+i]<=rf[n+i]:
+    print(n)
+    minimal = rf[n]
+    print(minimal)
+    for i in range(1, 10):
+        print(rf[n+i])
+        if rf[n+i]>minimal:
             buy +=1
         else:
             break
-    text_2 = "Покупать на " + str(buy) + " недели."
+            # print(minimal)
+            # print(i)
+            # minimal = rf[n+i]
+    text_2 = "Покупать на " + str(buy) + " недель."
     # print("Покупать на ", buy, "недели.")
     forecasting_plot(reinforce, 'timestamp', 'forecast', '#8b00ff', '#9BED00', text_1, text_2)
 
